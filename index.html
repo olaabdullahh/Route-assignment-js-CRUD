@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BookMark</title>
+    <link rel="shortcut icon" href="./bookmarker.jpg" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="title text-center">
+              <h1>Bookmarker</h1>
+            </div>
+            <div class="bookMarker">
+              <div
+                class="tilteMain my-4 d-flex align-items-center justify-content-center text-center"
+              >
+                <i class="fa-solid fa-bookmark green"></i>
+                <h2 class="px-2">Bookmark your favorite sites</h2>
+                <i class="fa-solid fa-bookmark yellow"></i>
+              </div>
+              <div class="form">
+                <div class="siteInput mb-4">
+                  <label for="siteName"
+                    ><i class="fa-solid fa-book-bookmark pe-2 mb-2"></i> Site
+                    Name</label
+                  >
+                  <input
+                    oninput="validationName()"
+                    type="text"
+                    class="form-control"
+                    id="siteName"
+                    placeholder="Bookmark Name"
+                  />
+
+                  <p id="msgName" class="alert alert-danger d-none">
+                    Please, the site name must consist of three to twenty upper
+                    or lower case letters
+                  </p>
+                </div>
+                <div class="siteUrl mb-4">
+                  <label for="siteUrl"
+                    ><i class="fa-solid fa-link pe-2 mb-2"></i> Site Url</label
+                  >
+                  <input
+                  oninput="validationUrl()"
+                    type="url"
+                    class="form-control"
+                    id="siteUrl"
+                    placeholder="Web Site URL"
+                  />
+                  <p id="msgUrl" class="alert alert-danger d-none">
+                    The Site Url Is Invalid Please inter Url Start With
+                    "https:// or http://"
+                  </p>
+                </div>
+                <div class="text-center">
+                  <button
+                    onclick="addWebSite()"
+                    class="btn submit px-5 mb-3"
+                    id="submit"
+                  >
+                    Submit
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="tabel mt-4">
+              <table class="table text-center">
+                <thead>
+                  <tr>
+                    <th scope="col">Index</th>
+                    <th scope="col">Website Name</th>
+                    <th scope="col">Visit</th>
+                    <th scope="col">Delete</th>
+                  </tr>
+                </thead>
+                <tbody id="addData">
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
+</html>

@@ -1,0 +1,86 @@
+*::selection {
+  background-color: #fec260;
+}
+body {
+  font-family: "PT Sans Caption", sans-serif;
+  text-transform: capitalize;
+  background-color: #f7ecde;
+}
+section {
+  padding: 70px 0;
+}
+section .container .title h1 {
+  font-family: Pacifico;
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 500;
+  margin-bottom: 70px;
+}
+section .container .title h1::after {
+  content: "";
+  bottom: 0;
+  left: 0;
+  background-color: #fec260;
+  width: 100%;
+  height: 20px;
+  position: absolute;
+  z-index: -1;
+  transition: height 0.5s;
+}
+section .container h1:hover::after {
+  height: 40px;
+}
+.bookMarker {
+  border-width: 2px 0 2px 0;
+  border-style: dotted;
+  border-color: #352e28;
+}
+.bookMarker .tilteMain i.green{
+    font-size: 25px;
+    color: #3ca55c;
+}
+.bookMarker .tilteMain i.yellow{
+    color: #b5ac49;
+    font-size: 25px;
+}
+.bookMarker .tilteMain h2 {
+    padding-top: 5px;
+    font-weight: 500;
+    font-family: "Righteous";
+  font-size: 25px;
+  background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+section .container .form label{
+  font-size: 16px;
+  font-weight: 600;
+}
+.form input:focus{
+  border: 0.5px solid #d99c39;
+  box-shadow: 0 0 0 3px #fec26055;
+}
+section .container .form .submit{
+  text-align: center;
+  background-color: #d1512d;
+  color: white;
+  transition:background-color 0.5s ;
+}
+section .container .form .submit:hover{
+  background-color: #BB4120;
+}
+#visitbtn{
+  background-color: #9eb23b;
+}
+#visitbtn:hover{
+background-color: #8A9E23;
+}
+#deletebtn{
+  background-color: #eb1d36;
+}
+#deletebtn:hover{
+  background-color: #D30820;
+}
