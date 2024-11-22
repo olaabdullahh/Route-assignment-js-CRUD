@@ -11,9 +11,13 @@ displayData();
 
 function addWebSite() {
   if (validationName() === true && validationUrl() === true)  {
-    const checkName = websiteList.some(item => item.name === siteName.value);
-    
-
+    let checkName = false;
+    for (let i = 0; i < websiteList.length; i++) {
+        if (websiteList[i].name === siteName.value) {
+            checkName = true;
+            break;
+        }
+    }
     if (checkName) {
       Swal.fire({
         icon: "error",
